@@ -21,3 +21,18 @@ After that you can start a https server using:
 http-server -S -K ssl/server.key -C ssl/server.crt
 ```
 
+### Client settings
+The file `client/js/credentials.js` contains you MQTT broker settings.
+It should look like:
+
+```js
+var creds = {
+  user: "<username>",
+  password: "<password>"
+};
+
+var location = {
+  hostname: "<broker_domain>",
+  port: <broker_port>
+};
+```

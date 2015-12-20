@@ -5,10 +5,6 @@
     WORKING: 'working',
     BROKEN: 'broken'
   };
-  var location = {
-    hostname: "m20.cloudmqtt.com",
-    port: 30576
-  };
 
   const clientId = '' + Math.random();
   var client = new Paho.MQTT.Client(
