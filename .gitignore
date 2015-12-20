@@ -1,0 +1,4 @@
+/client/ssl/
+/client/js/credentials.js
+/client/node_modules/
+/client/bower_components/

@@ -1,0 +1,60 @@
+.build-container {
+    z-index: -1;
+}
+.build-block {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+.build-status {
+    width: 100%;
+    height: 100%;
+    background-color: gray;
+}
+.build-status.working {
+    background-color: green;
+}
+.build-status.broken {
+    background-color: red;
+}
+
+.expand-transition {
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+    transform: scale(1.0);
+}
+.expand-enter {
+    transform: scale(0.1);
+}
+.expand-leave {
+    display: none;
+}
+
+.container {
+    margin: 1em;
+}
+
+.btn {
+    float: left;
+    margin: 1em;
+    padding: 0.2em;
+    background-color: lightgray;
+}
+
+.connection-status {
+    float: right;
+}
+
+/*@media (max-width: 1000px) {*/
+/*h1 {*/
+/*display: none;*/
+/*}*/
+/*.controls {*/
+/*display: none;*/
+/*}*/
+/*.messages {*/
+/*display: none;*/
+/*}*/
+/*}*/

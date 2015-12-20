@@ -1,0 +1,14 @@
+{
+  "name": "build-monitor",
+  "version": "1.0.0",
+  "description": "Mobile build monitor",
+  "private": true,
+  "author": "R.Moelker",
+  "license": "unlicensed",
+  "dependencies": {
+    "vue": "^1.0.12"
+  },
+  "devDependencies": {
+    "http-server": "^0.8.5"
+  }
+}
