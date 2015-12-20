@@ -36,3 +36,14 @@ var location = {
   port: <broker_port>
 };
 ```
+
+## Development
+
+### Icons
+ImageMagick is required to create icons. Otherwise icon generation will fail silently.
+
+To create icons:
+
+```bash
+grunt favicons
+```
