@@ -22,25 +22,15 @@ http-server -S -K ssl/server.key -C ssl/server.crt
 ```
 
 ### Client settings
-The file `client/js/credentials.js` contains you MQTT broker settings.
-It should look like:
+The MQTT broker is set up with a user password combination. It has to be provided at least once using GET parameters.
+Open the page with:
 
-```js
-var creds = {
-  user: "<username>",
-  password: "<password>"
-};
-
-var broker = {
-  hostname: "<broker_domain>",
-  port: <broker_port>
-};
-```
+`?user=<username>&password=<password>`
 
 ## Development
 
 ### Icons
-ImageMagick is required to create icons. Otherwise icon generation will fail silently.
+ImageMagick is required to create icons. If not installed correctly icon generation will fail silently.
 
 To create icons:
 

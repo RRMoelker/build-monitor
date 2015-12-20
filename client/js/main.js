@@ -1,5 +1,10 @@
 (function() {
   const topic = 'build';
+  var broker = {
+    hostname: "m20.cloudmqtt.com",
+    port: 30576
+  };
+
   var BUILD_STATES = {
     UNKOWN: 'UNKOWN',
     WORKING: 'working',
