@@ -8,8 +8,8 @@
 
   const clientId = '' + Math.random();
   var client = new Paho.MQTT.Client(
-    location.hostname,
-    Number(location.port),
+    broker.hostname,
+    Number(broker.port),
     'clientId');
   client.onConnectionLost = onConnectionLost;
   client.onMessageArrived = onMessageArrived;

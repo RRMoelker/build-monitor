@@ -31,7 +31,7 @@ var creds = {
   password: "<password>"
 };
 
-var location = {
+var broker = {
   hostname: "<broker_domain>",
   port: <broker_port>
 };
