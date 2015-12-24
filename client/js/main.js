@@ -5,6 +5,11 @@
     port: 30576
   };
 
+  var JENKINS_STATES = {
+    WORKING: "SUCCESS",
+    BROKEN: "FAILURE"
+  }
+
   var BUILD_STATES = {
     UNKOWN: 'UNKOWN',
     WORKING: 'working',
@@ -71,7 +76,9 @@
 
   function onMessageArrived(message) {
     var obj = JSON.parse(message.payloadString);
-    setBuildState(obj.working);
+    var working = obj.working.toUpperCase() === JENKINS_STATES.WORKING;
+
+    setBuildState(working);
     vm.messages.push(message.payloadString)
   }
 
@@ -84,7 +91,9 @@
   }
 
   function sendBuildState(working) {
-    var message = new Paho.MQTT.Message('{ "working": ' + working + ' }');
+    var txtMessage = working ? JENKINS_STATES.WORKING : JENKINS_STATES.BROKEN;
+
+    var message = new Paho.MQTT.Message('{ "working": "' + txtMessage+ '" }');
     message.destinationName = topic;
     message.retained = true;
     client.send(message);
