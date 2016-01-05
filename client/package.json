@@ -5,6 +5,9 @@
   "private": true,
   "author": "R.Moelker",
   "license": "unlicensed",
+  "scripts": {
+    "start": "http-server"
+  },
   "dependencies": {
     "vue": "^1.0.12"
   },
