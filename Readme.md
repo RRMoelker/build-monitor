@@ -2,6 +2,13 @@
 
 MQTT & Push notification build monitor system.
 
+# Monitor only
+To just read the state of your build try out the live site.
+
+`https://rrmoelker.github.io/build-monitor/client/?user=<user>&password=<pass>`
+
+Fill in your user and password atleast once. It will be stored in cache from that point on (yeah, not the safest...). The app will connect to the "m20.cloudmqtt.com" broker. This will likely be configurable in the future.
+
 ## client
 
 In the client folder start a http server with:
